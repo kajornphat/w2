@@ -1,11 +1,10 @@
-Subject,Credit,Grade
-Introduction of Engineering,1,B
-Programming Fundametals,3,A
-Computer Engineering Explora,1,B
-Engineering Mathematics I,3,C
-Physics I,3,B
-Physics Laboratory I,1,A
-English I,3,A
-Man and Society,3,B
-Table Tennis,1,B+
-
+Subject,Credit,Grade,Semester
+Introduction of Engineering,1,B,1
+Programming Fundametals,3,A,1
+Computer Engineering Explora,1,B,1
+Engineering Mathematics I,3,C,1
+Physics I,3,B,1
+Physics Laboratory I,1,A,1
+English I,3,A,1
+Man and Society,3,B,1
+Table Tennis,1,B+,1

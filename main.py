@@ -1,7 +1,7 @@
 import csv
 import shutil
 
-file = 'TestCSV.csv'
+file = 'Grade/Database To-Do Week 1 GPA - Sheet1.csv'
 
 def get_length(file_path):
 	with open(file_path, "r") as csvfile:
@@ -94,7 +94,8 @@ if __name__ == '__main__':
 	while(1):
 		user_input = text_modeUI()
 		if user_input in ['I','i']:
-			insert()
+			subject, credit, grade, semester = insert()
+			append(subject, credit, grade, semester)
 		
 		elif user_input in ['E','e']:
 			csvlist()

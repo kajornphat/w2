@@ -1,56 +1,43 @@
-
-
-Introduction of Engineering,1,B
-Programming Fundametals,3,A
-Computer Engineering Explora,1,B
-Engineering Mathematics I,3,C
-Physics I,3,B
-Physics Laboratory I,1,A
-English I,3,A
-Man and Society,3,B
-Table Tennis,1,B+
-,,,,,,
-Semester 2,,,,,,
-Subject Name,Credit,Grade,Point,,,
-Electric Circuit Theory,3,C+,7.5,,,
-Electric Circuit Lab,1,A,4,,,
-Algorithms and Data Structure,3,A,12,,,
-Work Ethics,1,B+,3.5,,,
-Meditation For Self Dev,3,A,12,,,
-Engineering Mathematics II,3,C+,7.5,,,
-Physics II,3,C+,7.5,,,
-Physics Laboratory II,1,A,4,,,
-English II,3,B+,10.5,,,
-Basketball,1,B+,3.5,,,
-,,,,,,
-Semester 3,,,,,,
-Subject Name,Credit,Grade,Point,,,
-Statistics For Computer Engi,3,C,6,,,
-Introduction to Signals and,3,D+,4.5,,,
-Logic Design of Digital Syst,3,C+,7.5,,,
-Digital System Design Labora,1,B+,3.5,,,
-Software Development Practic,3,B+,10.5,,,
-Discrete Mathematics,3,D+,4.5,,,
-Physics in Daily Life,3,A,12,,,
-Systematic and creative thinking,3,B,9,,,
-,,,,,,
-Semester 4,,,,,,
-Subject Name,Credit,Grade,Point,,,
-Analog and Digital Electronic,3,A,12,,,
-Computer Networks I,3,C+,7.5,,,
-Ubiquitous Computing,3,B+,10.5,,,
-Software Development Practice,3,C+,7.5,,,
-Computer Organization,3,B+,10.5,,,
-General Mathematics,3,B,9,,,
-Human Body and Health,3,A,12,,,
-,,,,,,
-Semester 5,,,,,,
-Subject Name,Credit,Grade,Point,,,
-Analog and Digital Electronic,1,B+,3.5,,,
-Software Engineering,3,C+,7.5,,,
-Operating Systems,3,B+,10.5,,,
-Embedded System Design,3,B+,10.5,,,
-Computer Networks II,3,A,12,,,
-Statistics in Everyday life,3,B+,10.5,,,
-English Conversation,3,B+,10.5,,,
-Psychology for Happy life,3,C+,7.5,,,
+id,Subject,Credit,Grade,Semester
+1,Introduction of Engineering,1,B,1
+2,Programming Fundametals,3,A,1
+3,Computer Engineering Explora,1,B,1
+4,Engineering Mathematics I,3,C,1
+5,Physics I,3,B,1
+6,Physics Laboratory I,1,A,1
+7,English I,3,A,1
+8,Man and Society,3,B,1
+9,Table Tennis,1,B+,1
+10,Electric Circuit Theory,3,C+,2
+11,Electric Circuit Lab,1,A,2
+12,Algorithms and Data Structure,3,A,2
+13,Work Ethics,1,B+,2
+14,Meditation For Self Dev,3,A,2
+15,Engineering Mathematics II,3,C+,2
+16,Physics II,3,C+,2
+17,Physics Laboratory II,1,A,2
+18,English II,3,B+,2
+19,Basketball,1,B+,2
+20,Statistics For Computer Engi,3,C,3
+21,Introduction to Signals and,3,D+,3
+22,Logic Design of Digital Syst,3,C+,3
+23,Digital System Design Labora,1,B+,3
+24,Software Development Practic,3,B+,3
+25,Discrete Mathematics,3,D+,3
+26,Physics in Daily Life,3,A,3
+27,Systematic and creative thinking,3,B,3
+28,Analog and Digital Electronic,3,A,4
+29,Computer Networks I,3,C+,4
+30,Ubiquitous Computing,3,B+,4
+31,Software Development Practice,3,C+,4
+32,Computer Organization,3,B+,4
+33,General Mathematics,3,B,4
+34,Human Body and Health,3,A,4
+35,Analog and Digital Electronic,1,B+,5
+36,Software Engineering,3,C+,5
+37,Operating Systems,3,B+,5
+38,Embedded System Design,3,B+,5
+39,Computer Networks II,3,A,5
+40,Statistics in Everyday life,3,B+,5
+41,English Conversation,3,B+,5
+42,Psychology for Happy life,3,C+,5

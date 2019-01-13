@@ -1,7 +1,6 @@
-id,Subject,Credit,Grade,Semester
-1,Introduction of Engineering,1,B,1
-2,Programming Fundametals,3,A,1
-3,Computer Engineering Explora,1,B,1
-4,Engineering Mathematics I,3,C,1
-5,Physics I,3,B,1
-
+id,Subject,Credit,Grade,Semester
+1,Introduction of Engineering,1,B,1
+2,Programming Fundametals,3,A,1
+3,Computer Engineering Explora,1,B,1
+4,Engineering Mathematics I,3,C,1
+5,Physics,3,B,1

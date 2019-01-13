@@ -31,10 +31,10 @@ def insert():
 	credit = input("Credit : ")
 	grade = input("Grade : ")
 	semester = input("Semester : ")
-	append(subject, credit, grade, semester)
-	
-	recent_input = 'At semester '+semester+' you attend '+subject+'which has '+credit+' credits and you got '+grade+', has been added to csv files'
+
+	recent_input = 'At semester '+semester+' you attend '+subject+' which has '+credit+' credits and you got '+grade+', has been added to csv files'
 	print(recent_input)
+	return subject, credit, grade, semester
 
 def calculateGPA(semester):
 	grade = {'A': 4, 'B+': 3.5, 'B': 3, 'C+': 2.5, 'C': 2, 'D+': 1.5, 'D': 1, 'F': 0}
@@ -73,8 +73,7 @@ def edit(edit_id, subject, credit, grade, semester):
 	shutil.move('temp_file.csv', file)
 
 def text_modeUI():
-	print("'Your GPA system'\nWhere you can edit/insert/save your grade into CSV file\n")
-	user_input = input('Press "I" to insert your grade, "E" to edit the selected data, "C" to calculate GPA\nEnter : ')
+	user_input = input('Press "I" to insert your grade, "E" to edit the selected data, "C" to calculate GPA, "Z" to exit\nEnter : ')
 	return user_input
 
 def csvlist(selected = None):
@@ -91,11 +90,24 @@ def csvlist(selected = None):
 				print(row['id']+'. '+row['Subject'])
 
 if __name__ == '__main__':
-	user_input = text_modeUI()
-	if user_input in ['I','i']:
-		insert()
-	elif user_input in ['E','e']:
-		csvlist()
-		input_id = input("Which subject you wish to change (insert an id) : ")
-		csvlist(input_id)
+	print("'Your GPA system'\nWhere you can edit/insert/save your grade into CSV file")
+	while(1):
+		user_input = text_modeUI()
+		if user_input in ['I','i']:
+			insert()
+		
+		elif user_input in ['E','e']:
+			csvlist()
+			input_id = input("Which subject you wish to change (insert an id) : ")
+			csvlist(input_id)
+			subject, credit, grade, semester = insert()
+			edit(input_id, subject, credit, grade, semester)
+
+		elif user_input in ['C','c']:
+			select_semester = input("Select the semester : ")
+			print(calculateGPA(select_semester))
+		
+		elif user_input in ['Z','z']:
+			print("Good bye!")
+			break
 		

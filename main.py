@@ -1,13 +1,28 @@
 import csv
+import shutil
+from tempfile import NamedTemporaryFile
 
 file = 'TestCSV.csv'
+
+def get_length(file_path):
+	with open(file_path, "r") as csvfile:
+		reader = csv.reader(csvfile)
+		reader_list = list(reader)
+		return len(reader_list)
 
 def append(subject, credit, grade, semester):
 	global file
 	with open(file, 'a', newline = '') as csvfile:
-		fieldnames = ['Subject', 'Credit', 'Grade', 'Semester']
+		fieldnames = ['id', 'Subject', 'Credit', 'Grade', 'Semester']
+		next_id = get_length(file)
 		writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-		writer.writerow({'Subject': subject, 'Credit': credit, 'Grade' : grade, 'Semester': semester})
+		writer.writerow({
+					'id' : next_id,
+					'Subject': subject, 
+					'Credit': credit, 
+					'Grade' : grade, 
+					'Semester': semester
+					})
 
 def insert():
 	'''
@@ -36,4 +51,4 @@ def calculateGPA(semester):
 				sum_credit += int(row['Credit'])
 		return sum_point/sum_credit
 
-print(calculateGPA(2))
+insert()

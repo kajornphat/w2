@@ -1,6 +1,5 @@
 import csv
 import shutil
-from tempfile import NamedTemporaryFile
 
 file = 'TestCSV.csv'
 
@@ -49,6 +48,54 @@ def calculateGPA(semester):
 				point = int(row['Credit']) * grade[row['Grade']]
 				sum_point += point
 				sum_credit += int(row['Credit'])
+				# print(row)
 		return sum_point/sum_credit
 
-insert()
+def edit(edit_id, subject, credit, grade, semester):
+	global file
+	with open(file, "r") as csvfile:
+		reader = csv.DictReader(csvfile)
+		with open('temp_file.csv', "w") as temp_file:
+			fieldnames = ['id', 'Subject', 'Credit', 'Grade', 'Semester']
+			writer = csv.DictWriter(temp_file, fieldnames=fieldnames)
+			writer.writeheader()
+			for row in reader:
+				if edit_id is not None:
+					if row['id'] == str(edit_id):
+						row['Subject'] = subject
+						row['Credit'] = credit
+						row['Grade'] = grade
+						row['Semester'] = semester
+				else:
+					pass
+				writer.writerow(row)
+
+	shutil.move('temp_file.csv', file)
+
+def text_modeUI():
+	print("'Your GPA system'\nWhere you can edit/insert/save your grade into CSV file\n")
+	user_input = input('Press "I" to insert your grade, "E" to edit the selected data, "C" to calculate GPA\nEnter : ')
+	return user_input
+
+def csvlist(selected = None):
+	global file	
+	with open(file, newline='') as csvfile:
+		reader = csv.DictReader(csvfile)
+		if selected is not None:
+			for row in reader:
+				if row['id'] == str(selected):
+					print("You choose "+row['Subject']+', Credit '+row['Credit']+', Grade '+row['Grade']+', Semester '+row['Semester'])
+		else:
+			print("List of Subjects in CSV file")
+			for row in reader:		
+				print(row['id']+'. '+row['Subject'])
+
+if __name__ == '__main__':
+	user_input = text_modeUI()
+	if user_input in ['I','i']:
+		insert()
+	elif user_input in ['E','e']:
+		csvlist()
+		input_id = input("Which subject you wish to change (insert an id) : ")
+		csvlist(input_id)
+		
